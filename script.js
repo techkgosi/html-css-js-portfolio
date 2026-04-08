@@ -3,9 +3,10 @@ function toggleMenu() {
     const icon = document.querySelector (".hamburger-icon");
     menu.classList.toggle("open");
     icon.classList.toggle("open");
+{
+    
 }
-
-let currentSlide = 0;
+     let currentSlide = 0;
 
 function moveSlide(direction) {
     const slides = document.querySelectorAll(".carousel-item");
@@ -23,4 +24,6 @@ function moveSlide(direction) {
     }
 
     slides[currentSlide].classList.add("active");
+}
+
 }

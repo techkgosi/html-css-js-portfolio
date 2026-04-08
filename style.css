@@ -430,3 +430,61 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* CERTIFICATION CAROUSEL */
+
+#certification {
+    text-align: center;
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    display: none;
+    width: 100%;
+    border-radius: 1.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Buttons */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-btn:hover {
+    background: black;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
