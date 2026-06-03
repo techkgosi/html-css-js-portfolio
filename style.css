@@ -431,60 +431,176 @@ footer p {
     text-align: center;
 }
 
-/* CERTIFICATION CAROUSEL */
+/* CERTIFICATION CARD SLIDER */
 
 #certification {
     text-align: center;
     position: relative;
 }
 
-.carousel-container {
-    position: relative;
-    max-width: 600px;
-    margin: 2rem auto;
+.cert-slider-container {
+    max-width: 1100px;
+    padding: 20px 10px;
+    margin: 2rem auto 0;
     overflow: hidden;
 }
 
-.carousel {
+.cert-slider-wrapper .cert-card {
+    background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    flex-direction: column;
+    border-radius: 20px;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
 }
 
-.carousel-item {
-    display: none;
+.cert-slider-wrapper .cert-card:hover {
+    transform: translateY(-10px);
+}
+
+.cert-card .cert-card-image {
+    position: relative;
+}
+
+.cert-card .cert-card-image img {
     width: 100%;
-    border-radius: 1.5rem;
-    transition: 0.5s ease-in-out;
+    padding: 10px;
+    border-radius: 22px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 
-.carousel-item.active {
-    display: block;
-}
-
-/* Buttons */
-
-.carousel-btn {
+.cert-card .cert-card-image .cert-card-tag {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
+    top: 25px;
+    left: 25px;
+    font-size: 0.75rem;
+    color: rgb(53, 53, 53);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-btn:hover {
-    background: black;
+.cert-card .cert-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px 25px;
 }
 
-.prev {
-    left: -50px;
+.cert-card .cert-card-content .cert-card-title {
+    color: #111111;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
 }
 
-.next {
-    right: -50px;
+.cert-card .cert-card-content .cert-card-text {
+    color: rgb(85, 85, 85);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.cert-card .cert-card-footer {
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    gap: 1rem;
+}
+
+.cert-card .cert-card-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card .cert-card-issuer {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+.cert-card .cert-card-date {
+    font-size: 0.8rem;
+    color: rgb(85, 85, 85);
+}
+
+.cert-card .cert-card-button {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.81rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    background: rgb(53, 53, 53);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.cert-card .cert-card-button:hover {
+    background: rgb(0, 0, 0);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cert-slider-wrapper .swiper-pagination-bullet {
+    height: 15px;
+    width: 15px;
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    background: rgb(200, 200, 200);
+}
+
+.cert-slider-wrapper .swiper-pagination-bullet-active {
+    background: rgb(163, 163, 163);
+}
+
+.cert-slider-wrapper .swiper-pagination-bullet-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(53, 53, 53);
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: cert-autoplay-loading 5s linear forwards;
+}
+
+.cert-slider-container:hover .cert-slider-wrapper .swiper-pagination-bullet-active::before {
+    animation-play-state: paused;
+}
+
+@keyframes cert-autoplay-loading {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.cert-slider-wrapper :where(.swiper-button-prev, .swiper-button-next) {
+    color: rgb(53, 53, 53);
+    margin-top: -35px;
+    transition: all 0.3s ease;
+}
+
+.cert-slider-wrapper :where(.swiper-button-prev, .swiper-button-next):hover {
+    color: rgb(0, 0, 0);
 }

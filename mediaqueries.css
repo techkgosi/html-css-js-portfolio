@@ -8,6 +8,17 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .cert-slider-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cert-slider-wrapper :where(.swiper-button-prev, .swiper-button-next) {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #desktop-nav {
         display: none;

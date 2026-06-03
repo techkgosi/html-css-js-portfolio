@@ -6,7 +6,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
 </head>
 <body>
     <nav id="desktop-nav">
@@ -247,10 +248,101 @@
         />
     </section>
     <section id="certification">
-        <p class="section__text__p1">Discover My</p>
+         <p class="section__text__p1">Discover My</p>
         <h1 class="title">Certefications</h1>
-        <div>
-
+        <div class="cert-slider-container">
+            <div class="cert-slider-wrapper swiper">
+                <div class="cert-card-list swiper-wrapper">
+                    <div class="cert-card swiper-slide">
+                        <div class="cert-card-image">
+                            <img src="./assets/education.png" alt="Google Data Analytics Certificate" />
+                            <div class="cert-card-tag">Data</div>
+                        </div>
+                        <div class="cert-card-content">
+                            <h3 class="cert-card-title">Google Data Analytics</h3>
+                            <p class="cert-card-text">Professional certificate covering data cleaning, analysis, visualization, and stakeholder communication using spreadsheets, SQL, and R.</p>
+                            <div class="cert-card-footer">
+                                <div class="cert-card-meta">
+                                    <span class="cert-card-issuer">Google / Coursera</span>
+                                    <span class="cert-card-date">2024</span>
+                                </div>
+                                <a href="#" class="cert-card-button">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card swiper-slide">
+                        <div class="cert-card-image">
+                            <img src="./assets/experience.png" alt="Project Management Certificate" />
+                            <div class="cert-card-tag">Management</div>
+                        </div>
+                        <div class="cert-card-content">
+                            <h3 class="cert-card-title">Project Management Foundations</h3>
+                            <p class="cert-card-text">Foundational training in project planning, scheduling, risk management, and delivery for cross-functional technology teams.</p>
+                            <div class="cert-card-footer">
+                                <div class="cert-card-meta">
+                                    <span class="cert-card-issuer">Professional Development</span>
+                                    <span class="cert-card-date">2023</span>
+                                </div>
+                                <a href="#" class="cert-card-button">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card swiper-slide">
+                        <div class="cert-card-image">
+                            <img src="./assets/checkmark.png" alt="Full Stack Development Certificate" />
+                            <div class="cert-card-tag">Development</div>
+                        </div>
+                        <div class="cert-card-content">
+                            <h3 class="cert-card-title">Full Stack Web Development</h3>
+                            <p class="cert-card-text">End-to-end web development covering HTML, CSS, JavaScript, backend APIs, databases, and deployment of production-ready applications.</p>
+                            <div class="cert-card-footer">
+                                <div class="cert-card-meta">
+                                    <span class="cert-card-issuer">Tech Training</span>
+                                    <span class="cert-card-date">2023</span>
+                                </div>
+                                <a href="#" class="cert-card-button">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card swiper-slide">
+                        <div class="cert-card-image">
+                            <img src="./assets/Untitled design.png" alt="SQL Certificate" />
+                            <div class="cert-card-tag">Database</div>
+                        </div>
+                        <div class="cert-card-content">
+                            <h3 class="cert-card-title">SQL for Data Science</h3>
+                            <p class="cert-card-text">Practical SQL skills for querying relational databases, aggregations, joins, and building analytics-ready datasets.</p>
+                            <div class="cert-card-footer">
+                                <div class="cert-card-meta">
+                                    <span class="cert-card-issuer">Online Learning</span>
+                                    <span class="cert-card-date">2024</span>
+                                </div>
+                                <a href="#" class="cert-card-button">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card swiper-slide">
+                        <div class="cert-card-image">
+                            <img src="./assets/Coming.png" alt="Cloud Certificate" />
+                            <div class="cert-card-tag">Cloud</div>
+                        </div>
+                        <div class="cert-card-content">
+                            <h3 class="cert-card-title">Cloud Fundamentals</h3>
+                            <p class="cert-card-text">Introduction to cloud services, infrastructure concepts, and deploying scalable applications on modern cloud platforms.</p>
+                            <div class="cert-card-footer">
+                                <div class="cert-card-meta">
+                                    <span class="cert-card-issuer">In Progress</span>
+                                    <span class="cert-card-date">2026</span>
+                                </div>
+                                <a href="#" class="cert-card-button">View Credential</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
         </div>
         <img src="./assets/arrow.png" 
         alt="Arrow icon" 
@@ -361,6 +453,7 @@
         </nav>
         <p>Copyright &#169; 2026 Kgosi Olifant. All Rights Reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
