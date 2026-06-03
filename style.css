@@ -436,19 +436,42 @@ footer p {
 #certification {
     text-align: center;
     position: relative;
+    height: auto;
+    min-height: fit-content;
+    padding-bottom: 2rem;
+    overflow: visible;
 }
 
 .cert-slider-container {
-    max-width: 1100px;
-    padding: 20px 10px;
+    position: relative;
+    max-width: 1200px;
+    padding: 16px 72px 0;
     margin: 2rem auto 0;
+    overflow: visible;
+}
+
+.cert-slider-wrapper.swiper {
     overflow: hidden;
+    padding: 14px 4px;
+}
+
+.cert-slider-wrapper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.cert-slider-wrapper .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    padding: 6px 4px;
+    display: flex;
 }
 
 .cert-slider-wrapper .cert-card {
     background: #fff;
     display: flex;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    flex: 1;
     flex-direction: column;
     border-radius: 20px;
     border: rgb(163, 163, 163) 0.1rem solid;
@@ -508,6 +531,7 @@ footer p {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 20px;
+    flex: 1;
 }
 
 .cert-card .cert-card-footer {
@@ -555,20 +579,33 @@ footer p {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.cert-slider-wrapper .swiper-pagination-bullet {
+#certification .cert-slider-pagination {
+    position: relative !important;
+    left: 50% !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: 100%;
+    transform: translateX(-50%) !important;
+    margin-top: 1.75rem;
+    padding-bottom: 0.25rem;
+    text-align: center;
+}
+
+#certification .cert-slider-pagination .swiper-pagination-bullet {
     height: 15px;
     width: 15px;
     opacity: 1;
     overflow: hidden;
     position: relative;
     background: rgb(200, 200, 200);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.cert-slider-wrapper .swiper-pagination-bullet-active {
+#certification .cert-slider-pagination .swiper-pagination-bullet-active {
     background: rgb(163, 163, 163);
 }
 
-.cert-slider-wrapper .swiper-pagination-bullet-active::before {
+#certification .cert-slider-pagination .swiper-pagination-bullet-active.cert-dot-animate::before {
     content: '';
     position: absolute;
     top: 0;
@@ -578,10 +615,10 @@ footer p {
     background: rgb(53, 53, 53);
     transform-origin: left center;
     transform: scaleX(0);
-    animation: cert-autoplay-loading 5s linear forwards;
+    animation: cert-autoplay-loading var(--cert-autoplay-duration, 5s) linear forwards;
 }
 
-.cert-slider-container:hover .cert-slider-wrapper .swiper-pagination-bullet-active::before {
+#certification .cert-slider-container:hover .cert-slider-pagination .swiper-pagination-bullet-active.cert-dot-animate::before {
     animation-play-state: paused;
 }
 
@@ -595,12 +632,31 @@ footer p {
     }
 }
 
-.cert-slider-wrapper :where(.swiper-button-prev, .swiper-button-next) {
+#certification .cert-slider-nav.swiper-button-prev,
+#certification .cert-slider-nav.swiper-button-next {
     color: rgb(53, 53, 53);
-    margin-top: -35px;
+    top: 42%;
+    margin-top: 0;
+    width: 44px;
+    height: 44px;
     transition: all 0.3s ease;
 }
 
-.cert-slider-wrapper :where(.swiper-button-prev, .swiper-button-next):hover {
+#certification .cert-slider-nav.swiper-button-prev {
+    left: 8px;
+}
+
+#certification .cert-slider-nav.swiper-button-next {
+    right: 8px;
+}
+
+#certification .cert-slider-nav.swiper-button-prev:hover,
+#certification .cert-slider-nav.swiper-button-next:hover {
     color: rgb(0, 0, 0);
+}
+
+#certification .cert-slider-nav.swiper-button-prev::after,
+#certification .cert-slider-nav.swiper-button-next::after {
+    font-size: 1.35rem;
+    font-weight: 700;
 }
