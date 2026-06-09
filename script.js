@@ -5,6 +5,54 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+(function initTypingAnimation() {
+    const typingEl = document.getElementById("typing-role");
+    if (!typingEl) return;
+
+    const roles = [
+        "Full-Stack Developer",
+        "Data Consultant",
+        "Project Manager",
+        "AI Enthusiast",
+    ];
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+
+        if (!isDeleting) {
+            typingEl.textContent = currentRole.slice(0, charIndex + 1);
+            charIndex += 1;
+
+            if (charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, 2000);
+                return;
+            }
+
+            setTimeout(typeEffect, 100);
+            return;
+        }
+
+        typingEl.textContent = currentRole.slice(0, charIndex - 1);
+        charIndex -= 1;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(typeEffect, 400);
+            return;
+        }
+
+        setTimeout(typeEffect, 50);
+    }
+
+    typeEffect();
+})();
+
 const CERT_AUTOPLAY_DELAY = 5000;
 
 function restartCertDotAnimation() {

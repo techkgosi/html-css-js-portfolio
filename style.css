@@ -192,6 +192,34 @@ section {
 .section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    min-height: 2.5rem;
+}
+
+.section__text__p2 .typing-role {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    background: linear-gradient(120deg, #9333ea 0%, #ec4899 50%, #fb923c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section__text__p2 .typing-cursor {
+    color: #9333ea;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    animation: typing-cursor-blink 0.7s step-end infinite;
+}
+
+@keyframes typing-cursor-blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .title {
@@ -478,6 +506,8 @@ footer p {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
     text-align: left;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .cert-slider-wrapper .cert-card:hover {
@@ -486,20 +516,31 @@ footer p {
 
 .cert-card .cert-card-image {
     position: relative;
+    flex-shrink: 0;
+    padding: 12px 12px 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .cert-card .cert-card-image img {
+    display: block;
     width: 100%;
-    padding: 10px;
-    border-radius: 22px;
-    object-fit: cover;
-    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 12px;
+    object-fit: contain;
+    object-position: center;
+    box-sizing: border-box;
 }
 
 .cert-card .cert-card-image .cert-card-tag {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
     font-size: 0.75rem;
     color: rgb(53, 53, 53);
     padding: 5px 15px;
