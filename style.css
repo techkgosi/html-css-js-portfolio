@@ -408,6 +408,27 @@ article .icon {
     border-color: rgb(163, 163, 163);
 }
 
+.project-tags {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 0.75rem;
+}
+
+.project-tag {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: rgb(215, 215, 215);
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
 /* CONTACT */
 
 #contact {
