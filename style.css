@@ -478,10 +478,14 @@ article .icon {
     background: rgb(250, 250, 250);
 }
 
-.project-img {
+#projects .projects-desktop .project-img {
     border-radius: 2rem;
     width: 90%;
     height: 90%;
+}
+
+.project-img {
+    border-radius: 2rem;
 }
 
 .project-title {

@@ -82,10 +82,13 @@
     }
 
     #projects .projects-mobile .article-container {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         padding: 0.75rem 0.75rem 0;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     #projects .projects-mobile .project-img {
@@ -93,9 +96,11 @@
         width: 100%;
         max-width: 100%;
         height: auto;
-        max-height: 240px;
+        max-height: 220px;
         margin: 0 auto;
         border-radius: 1rem;
+        object-fit: contain;
+        object-position: center;
     }
 
     #projects .projects-mobile .project-title {
