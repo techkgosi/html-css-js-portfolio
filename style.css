@@ -385,20 +385,11 @@ article .icon {
 
 #projects {
     position: relative;
-    height: auto;
-    min-height: fit-content;
-    padding-bottom: 2rem;
-    overflow: visible;
-    text-align: center;
 }
 
 #projects .project-title {
     margin: 1rem 1rem 0.5rem;
     color: black;
-}
-
-#projects .experience-sub-title.project-title {
-    margin-bottom: 0.5rem;
 }
 
 #projects .project-tags {
@@ -434,37 +425,32 @@ article .icon {
     flex-direction: column;
     align-items: center;
     min-width: 0;
-    width: 100%;
+}
+
+.projects-mobile {
+    display: none;
 }
 
 .projects-slider-container {
     position: relative;
-    width: 100%;
     max-width: 1200px;
     margin: 2rem auto 0;
-    padding: 16px 72px 0;
     box-sizing: border-box;
-    overflow: visible;
 }
 
 .projects-slider-wrapper.swiper {
     overflow: hidden;
-    padding: 14px 4px;
-}
-
-.projects-slider-wrapper .swiper-wrapper {
-    align-items: stretch;
 }
 
 .projects-slider-wrapper .swiper-slide {
     height: auto;
     box-sizing: border-box;
-    padding: 6px 4px;
     display: flex;
 }
 
 .projects-slider-wrapper .swiper-slide .details-container {
     flex: 1;
+    width: 100%;
 }
 
 #projects .projects-slider-pagination {
@@ -495,8 +481,7 @@ article .icon {
 .project-img {
     border-radius: 2rem;
     width: 90%;
-    height: auto;
-    object-fit: contain;
+    height: 90%;
 }
 
 .project-title {

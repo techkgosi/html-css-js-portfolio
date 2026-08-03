@@ -153,36 +153,41 @@ if (certSlider) {
 }
 
 const PROJECT_AUTOPLAY_DELAY = 7000;
-const projectsSlider = document.querySelector(".projects-slider-wrapper");
+const projectsSliderEl = document.querySelector(".projects-mobile .projects-slider-wrapper");
+let projectsSwiper = null;
 
-if (projectsSlider) {
-    new Swiper(".projects-slider-wrapper", {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        speed: 900,
-        loop: true,
-        autoHeight: true,
-        autoplay: {
-            delay: PROJECT_AUTOPLAY_DELAY,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
-        pagination: {
-            el: "#projects .projects-slider-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            769: {
-                slidesPerView: 3,
-                spaceBetween: 32,
-                loop: false,
-                autoHeight: false,
-                allowTouchMove: false,
-                autoplay: false,
-                pagination: {
-                    enabled: false,
-                },
+function initProjectsSlider() {
+    if (!projectsSliderEl || typeof Swiper === "undefined") return;
+
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile && !projectsSwiper) {
+        projectsSwiper = new Swiper(".projects-mobile .projects-slider-wrapper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            speed: 900,
+            loop: true,
+            autoHeight: true,
+            autoplay: {
+                delay: PROJECT_AUTOPLAY_DELAY,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
-        },
-    });
+            pagination: {
+                el: "#projects .projects-slider-pagination",
+                clickable: true,
+            },
+        });
+        return;
+    }
+
+    if (!isMobile && projectsSwiper) {
+        projectsSwiper.destroy(true, true);
+        projectsSwiper = null;
+    }
+}
+
+if (projectsSliderEl) {
+    initProjectsSlider();
+    window.addEventListener("resize", initProjectsSlider);
 }
