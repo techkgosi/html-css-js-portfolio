@@ -14,12 +14,45 @@
         margin-right: 5rem;
     }
 
-    #projects .about-containers {
-        align-items: stretch;
+    .projects-slider-container {
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .projects-slider-container {
+        padding: 0 0.75rem;
+    }
+
+    #projects .projects-slider-pagination {
+        display: block;
+    }
+
+    #projects .project-title {
+        font-size: 1.35rem;
+        line-height: 1.3;
+    }
+
+    #projects .project-img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    #projects .btn-container {
+        width: 100%;
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+    }
+
+    #projects .project-btn {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        padding: 0.85rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
     .cert-slider-container {
         padding-left: 12px;
         padding-right: 12px;

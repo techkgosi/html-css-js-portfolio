@@ -425,6 +425,54 @@ article .icon {
     flex-direction: column;
     align-items: center;
     min-width: 0;
+    width: 100%;
+}
+
+.projects-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.projects-slider-wrapper.swiper {
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.projects-slider-wrapper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.projects-slider-wrapper .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.projects-slider-wrapper .swiper-slide .details-container {
+    flex: 1;
+}
+
+#projects .projects-slider-pagination {
+    display: none;
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+#projects .projects-slider-pagination .swiper-pagination-bullet {
+    width: 0.55rem;
+    height: 0.55rem;
+    background: rgb(163, 163, 163);
+    opacity: 1;
+    margin: 0 0.35rem !important;
+    transition: all 0.3s ease;
+}
+
+#projects .projects-slider-pagination .swiper-pagination-bullet-active {
+    background: rgb(53, 53, 53);
+    transform: scale(1.2);
 }
 
 .color-container {

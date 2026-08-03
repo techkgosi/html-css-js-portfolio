@@ -151,3 +151,36 @@ if (certSlider) {
         document.fonts.ready.then(equalizeCertCardHeights);
     }
 }
+
+const PROJECT_AUTOPLAY_DELAY = 7000;
+const projectsSlider = document.querySelector(".projects-slider-wrapper");
+
+if (projectsSlider) {
+    new Swiper(".projects-slider-wrapper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: 900,
+        loop: true,
+        autoplay: {
+            delay: PROJECT_AUTOPLAY_DELAY,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        pagination: {
+            el: "#projects .projects-slider-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+                loop: false,
+                allowTouchMove: false,
+                autoplay: false,
+                pagination: {
+                    enabled: false,
+                },
+            },
+        },
+    });
+}
