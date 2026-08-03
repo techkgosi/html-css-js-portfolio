@@ -385,11 +385,20 @@ article .icon {
 
 #projects {
     position: relative;
+    height: auto;
+    min-height: fit-content;
+    padding-bottom: 2rem;
+    overflow: visible;
+    text-align: center;
 }
 
 #projects .project-title {
     margin: 1rem 1rem 0.5rem;
     color: black;
+}
+
+#projects .experience-sub-title.project-title {
+    margin-bottom: 0.5rem;
 }
 
 #projects .project-tags {
@@ -432,13 +441,14 @@ article .icon {
     position: relative;
     max-width: 1200px;
     margin: 2rem auto 0;
-    padding: 0 1rem;
+    padding: 16px 72px 0;
     box-sizing: border-box;
+    overflow: visible;
 }
 
 .projects-slider-wrapper.swiper {
     overflow: hidden;
-    padding: 0.5rem 0;
+    padding: 14px 4px;
 }
 
 .projects-slider-wrapper .swiper-wrapper {
@@ -448,6 +458,7 @@ article .icon {
 .projects-slider-wrapper .swiper-slide {
     height: auto;
     box-sizing: border-box;
+    padding: 6px 4px;
     display: flex;
 }
 
@@ -483,7 +494,8 @@ article .icon {
 .project-img {
     border-radius: 2rem;
     width: 90%;
-    height: 90%;
+    height: auto;
+    object-fit: contain;
 }
 
 .project-title {

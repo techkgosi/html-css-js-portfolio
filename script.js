@@ -161,6 +161,7 @@ if (projectsSlider) {
         spaceBetween: 24,
         speed: 900,
         loop: true,
+        autoHeight: true,
         autoplay: {
             delay: PROJECT_AUTOPLAY_DELAY,
             disableOnInteraction: false,
@@ -175,6 +176,7 @@ if (projectsSlider) {
                 slidesPerView: 3,
                 spaceBetween: 32,
                 loop: false,
+                autoHeight: false,
                 allowTouchMove: false,
                 autoplay: false,
                 pagination: {

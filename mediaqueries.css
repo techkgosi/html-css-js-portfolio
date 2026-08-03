@@ -13,44 +13,71 @@
         margin-left: 5rem;
         margin-right: 5rem;
     }
-
-    .projects-slider-container {
-        padding: 0;
-    }
 }
 
 @media screen and (max-width: 768px) {
     .projects-slider-container {
-        padding: 0 0.75rem;
+        padding: 12px 12px 0;
+        margin-top: 1.5rem;
+    }
+
+    .projects-slider-wrapper.swiper {
+        padding: 12px 2px;
+    }
+
+    .projects-slider-wrapper .swiper-wrapper {
+        align-items: flex-start;
     }
 
     #projects .projects-slider-pagination {
         display: block;
+        margin-top: 1.25rem;
     }
 
-    #projects .project-title {
-        font-size: 1.35rem;
-        line-height: 1.3;
+    #projects .details-container.color-container {
+        padding: 1rem;
+    }
+
+    #projects .article-container {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0.75rem 0;
+        box-sizing: border-box;
     }
 
     #projects .project-img {
+        display: block;
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
         height: auto;
+        max-height: 180px;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    #projects .project-title {
+        font-size: 1.15rem;
+        line-height: 1.3;
+        margin: 0.75rem 0.5rem 0.5rem;
+    }
+
+    #projects .project-tags {
+        margin-bottom: 0.5rem;
     }
 
     #projects .btn-container {
         width: 100%;
-        padding: 0 0.5rem;
+        padding: 0 0.25rem;
         box-sizing: border-box;
+        gap: 0.5rem;
     }
 
     #projects .project-btn {
         flex: 1;
         min-width: 0;
         width: auto;
-        padding: 0.85rem 0.5rem;
-        font-size: 0.85rem;
+        padding: 0.65rem 0.5rem;
+        font-size: 0.8rem;
     }
 
     .cert-slider-container {
