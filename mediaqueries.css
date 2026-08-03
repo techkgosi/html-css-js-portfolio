@@ -8,6 +8,17 @@
     }
 }
 
+@media screen and (min-width: 769px) {
+    #projects {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    #projects .about-containers {
+        align-items: stretch;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .cert-slider-container {
         padding-left: 12px;

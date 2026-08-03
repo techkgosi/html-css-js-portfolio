@@ -387,6 +387,46 @@ article .icon {
     position: relative;
 }
 
+#projects .project-title {
+    margin: 1rem 1rem 0.5rem;
+    color: black;
+}
+
+#projects .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.75rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+#projects .project-tag {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding: 0.15rem 0.45rem;
+    border-radius: 0.75rem;
+    border: none;
+    background-color: rgb(215, 215, 215);
+    white-space: nowrap;
+    line-height: 1.2;
+    flex: 0 0 auto;
+}
+
+#projects .color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+}
+
 .color-container {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
@@ -406,27 +446,6 @@ article .icon {
 .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0.35rem;
-    justify-content: center;
-    align-items: center;
-    margin: 0 1rem 0.75rem;
-}
-
-.project-tag {
-    font-size: 0.6rem;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    padding: 0.15rem 0.45rem;
-    border-radius: 0.75rem;
-    border: none;
-    background: rgb(215, 215, 215);
-    white-space: nowrap;
-    line-height: 1.2;
 }
 
 /* CONTACT */
