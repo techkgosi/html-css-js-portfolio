@@ -439,6 +439,7 @@ article .icon {
 
 .projects-slider-container {
     position: relative;
+    width: 100%;
     max-width: 1200px;
     margin: 2rem auto 0;
     padding: 16px 72px 0;
